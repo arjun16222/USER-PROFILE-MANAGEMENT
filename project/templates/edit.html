@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <h1>{{ action }} Profile</h1>
+    <form method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" value="{{ user.name if user else '' }}" required><br>
+        <label>Email:</label>
+        <input type="email" name="email" value="{{ user.email if user else '' }}" required><br>
+        <button type="submit">Save</button>
+    </form>
+    <a href="/">Back</a>
+</body>
+</html>
